@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/txTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/txAnoCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ano"
+            android:inputType="number"
+            android:maxLength="4" />
+
+        <EditText
+            android:id="@+id/txImdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IMDb (ex.: tt1234567)"
+            android:inputType="textNoSuggestions" />
+
+        <EditText
+            android:id="@+id/txSinopse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sinopse"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minLines="2" />
+
+        <EditText
+            android:id="@+id/txGeneros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gêneros"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/txDuracao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duração em minutos"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/txTrailer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Trailer"
+            android:inputType="textUri" />
+
+        <EditText
+            android:id="@+id/txNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nota"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/txPoster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Link do pôster"
+            android:inputType="textUri" />
+
+        <EditText
+            android:id="@+id/txDirecao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Direção"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/txRoteiristas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Roteiristas"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/txElenco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Elenco"
+            android:inputType="textCapWords" />
+
+        <Button
+            android:id="@+id/btCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar" />
+
+        <TextView
+            android:id="@+id/tvMensagemCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="polite" />
+    </LinearLayout>
+</ScrollView>

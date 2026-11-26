@@ -2,6 +2,20 @@
 
 Use o `AppModeloProva` do pacote `ProvaF42026.zip`. Ele já tem Retrofit, Gson, `ViewPager2`, `BottomNavigationView` e dois fragments. A adaptação fica no próprio app, com Java, XML e os componentes do modelo.
 
+## Código completo para aplicar ao modelo
+
+Abra o `AppModeloProva` original no Android Studio. Copie o conteúdo de [`AppModeloProva/app/src/main`](AppModeloProva/app/src/main) deste repositório para a pasta de mesmo nome do projeto original e confirme a substituição dos arquivos com o mesmo nome. A estrutura Gradle, o manifesto e `activity_main.xml` vêm do modelo.
+
+| Parte | Java | XML |
+| --- | --- | --- |
+| API de filmes | [Movie](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/Movie.java), [MovieService](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/MovieService.java), [RetrofitConfig](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/RetrofitConfig.java) | |
+| Navegação | [MainActivity](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/MainActivity.java), [ViewPagerAdapter](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/ViewPagerAdapter.java) | [Menu](AppModeloProva/app/src/main/res/menu/bottom_nav_menu.xml) |
+| Pesquisa | [PesquisaFragment](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/PesquisaFragment.java), [FilmeAdapter](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/FilmeAdapter.java) | [Tela de pesquisa](AppModeloProva/app/src/main/res/layout/fragment_pesquisa.xml), [Item da lista](AppModeloProva/app/src/main/res/layout/item_filme.xml) |
+| Detalhes | [ResultadoFragment](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/ResultadoFragment.java) | [Tela de detalhes](AppModeloProva/app/src/main/res/layout/fragment_resultado.xml) |
+| Cadastro | [CadastroFragment](AppModeloProva/app/src/main/java/unoeste/fipp/appmodeloprova/CadastroFragment.java) | [Formulário](AppModeloProva/app/src/main/res/layout/fragment_cadastro.xml) |
+
+O endereço padrão em `RetrofitConfig.java` é `http://10.0.2.2:8080/apis/` para o emulador com o Spring rodando no mesmo computador. Para usar o endereço indicado na prova ou testar em aparelho físico, substitua `10.0.2.2` pelo IPv4 do computador que executa o Spring. [Rede do Android Emulator](https://developer.android.com/studio/run/emulator-networking-address)
+
 ## 1. Rode o backend e confira o MongoDB
 
 1. Extraia o ZIP. Abra a pasta `MoviesFinder` no IntelliJ como projeto Maven. Selecione o **JDK 25**, que é a versão do `pom.xml`.
